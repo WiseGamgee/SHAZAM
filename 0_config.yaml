@@ -1,0 +1,46 @@
+# Data directories
+RESULTS_DIR_PREFIX: "snp"
+TRAIN_PATCH_DIR: "data/snp/train_patched"
+VAL_PATCH_DIR: "data/snp/val_patched"
+TEST_PATCH_DIR: "data/snp/test_patched"
+MEAN_PATCH_DIR: "data/snp/median_patched"
+TRAIN_IMG_DIR: "data/snp/train"
+TEST_IMG_DIR: "data/snp/test"
+LABEL_DIR: "data/snp/image_labels.csv"
+
+# Image specifications
+IMG_SIZE: 1024 #snp
+PATCH_SIZE: 32
+IMG_CHANNELS: 10
+RGB_BANDS: [2, 1, 0]
+
+# Preprocessing
+TIME_PERIOD: "day"
+AUGMENT: FALSE
+NORMALISE: TRUE
+NORM_MIN: [0.013] #snp
+NORM_MAX: [0.6895] #snp
+
+# Processing parameters
+BATCH_SIZE: 32
+N_EPOCHS: 20
+N_CPUS: 16
+N_GPUS: 1
+ACCELERATOR: "gpu"
+FLOAT_PRECISION: "high"
+SAVE_IMGS: TRUE
+
+# SIU-Net
+MODEL_PARAMS:
+  hidden_channels: [32, 64, 128]
+  kernel_size: 3
+  upsample_mode: "bilinear"
+  batch_norm: FALSE
+  learning_rate: 1e-4
+  loss_function: "MAE"
+
+#
+TRAIN_TEST_PARAMS:
+  training_checkpoint: null
+  validation_checkpoint: null
+  testing_checkpoint: null

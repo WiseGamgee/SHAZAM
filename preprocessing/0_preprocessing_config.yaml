@@ -1,0 +1,5 @@
+# Data information
+DATA_DIR: "../data/snp"   # Directory leading to dataset with assumed train and test directories
+IMG_SIZE: 1024            # Number of pixels along the height and width of the images (assumed square)
+PATCH_SIZE: 32            # Number of pixels along the height and width for each patch
+VALIDATION_FRACTION: 0.1  # Fraction of the training dataset randomly assigned to the validation set
