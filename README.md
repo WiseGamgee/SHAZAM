@@ -5,6 +5,12 @@
 <a href=https://landsat.gsfc.nasa.gov/apps/YourNameInLandsat-main">Your Name in Landsat.</a> </em>
 </p>
 
+<p align="center">
+  <a href="https://www.arxiv.org/abs/2503.00348">
+    <img src="https://img.shields.io/badge/arXiv-preprint-b31b1b.svg">
+  </a>
+</p>
+
 # Summary
 SHAZAM is a self-supervised change monitoring method demonstrated for hazard detection and mapping 
 in a region of interest (ROI), using multispectral satellite images. SHAZAM is generalisable across 
@@ -32,6 +38,22 @@ made by SHAZAM when monitoring each ROI (bottom row). The hazards are: wildfires
 floods, drought, algal blooms, and deforestation, from left to right. </em>
 </p>
 
+# Library Structure
+- shazam/ contains the model architecture (PyTorch Lightning), dataloading and all the helpers.
+- preprocessing/ contains a group of sequential scripts that convert the train/test
+images into train/val/test patches.
+- 0_config.py contains all the configuration variables, data dirs, etc.
+- 1_train.py trains the model to reconstruct 32x32 patches for a given time of year.
+- 2_validate.py re-runs the model on the full-sized training images to output the real image,
+reconstructed image, and anomaly heatmaps.
+- 3_test.py does the same as 2_validate.py, but on the test dataset.
+- 4_results.py generates the plots and results tables seen in the paper.
+
+
+# Quickstart (TBC)
+
+# Architecture
+
 The SHAZAM method and underlying architecture are shown in the images below -
 much more detail is provided in the paper.
 
@@ -46,13 +68,20 @@ the bottom the inference stage for monitoring an ROI, and the top right highligh
  <em> SIU-Net model architecture. </em>
 </p>
 
-# Citation (TBC)
-arXiV paper publishing soon.
-
-# Quickstart (TBC)
-
 # Datasets (TBC)
 Dataset available on Zenodo soon.
+
+# Cite this Work (arXiV)
+```
+@misc{garske2025shazam,
+      title={SHAZAM: Self-Supervised Change Monitoring for Hazard Detection and Mapping}, 
+      author={Samuel Garske and Konrad Heidler and Bradley Evans and KC Wong and Xiao Xiang Zhu},
+      year={2025},
+      eprint={2503.00348},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2503.00348}}
+```
 
 
 
