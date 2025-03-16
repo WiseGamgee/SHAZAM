@@ -68,8 +68,20 @@ the bottom the inference stage for monitoring an ROI, and the top right highligh
  <em> SIU-Net model architecture. </em>
 </p>
 
-# Datasets (TBC)
-Dataset available on Zenodo soon.
+# Datasets
+The Sequoia National Park (SNP) dataset is currently available on Zenodo [at this link](https://zenodo.org/records/14948327).
+Contains wildfires and extreme, out-of-season snowfall.
+
+<p align="center">
+ <img src="images/snp_normal.jpg" alt="" width="32%">
+ <img src="images/fire_s2.jpg" alt="" width="32%">
+ <img src="images/snowfall_s2.jpg" alt="" width="32%">
+ <em> Sample images from the SNP dataset. The leftmost image is from the training dataset, showing the region in August.
+      the middle image shows wildfires, and the right image shows out of season snowfall in April.</em>
+</p>
+
+
+
 
 # Cite this Work (arXiV)
 ```
